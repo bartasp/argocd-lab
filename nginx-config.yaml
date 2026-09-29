@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-conf
+data:
+  default.conf: |
+    server {
+        listen 80;
+        location / {
+            return 200 'Witaj z ArgoCD GitOps na arm64!\n';
+            add_header Content-Type text/plain;
+        }
+    }
