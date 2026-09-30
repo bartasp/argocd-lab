@@ -3,6 +3,8 @@ minio:
 
 mimir:
   structuredConfig:
+    usage_stats:
+      enabled: false
     limits:
       compactor_blocks_retention_period: 6h
       ingestion_rate: 10000
