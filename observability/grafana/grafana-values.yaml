@@ -6,6 +6,9 @@ resources:
     cpu: 1000
     memory: 512Mi
 
+env:
+  GF_PLUGINS_PREINSTALL_DISABLED: "true"
+
 livenessProbe:
   initialDelaySeconds: 120
   timeoutSeconds: 10
@@ -33,11 +36,7 @@ datasources:
         type: loki
         url: http://loki.observability.svc.cluster.local:3100
         access: proxy
-      - name: Mimir
-        type: prometheus
-        url: http://mimir-nginx.observability.svc.cluster.local/prometheus
-        access: proxy
       - name: Tempo
         type: tempo
-        url: http://tempo.observability.svc.cluster.local:3100
+        url: http://tempo.observability.svc.cluster.local:3200
         access: proxy
