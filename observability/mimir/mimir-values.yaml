@@ -46,3 +46,7 @@ nginx:
 metaMonitoring:
   serviceMonitor:
     enabled: false
+
+nginx:
+  config:
+    dnsResolver: rke2-coredns-rke2-coredns
