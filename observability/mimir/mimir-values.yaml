@@ -1,0 +1,48 @@
+deploymentMode: monolithic
+
+mimir:
+  structuredConfig:
+    limits:
+      compactor_blocks_retention_period: 24h
+
+monolithic:
+  replicas: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      memory: 512Mi
+  persistentVolume:
+    enabled: true
+    size: 2Gi
+
+alertmanager:
+  replicas: 0
+compactor:
+  replicas: 0
+distributor:
+  replicas: 0
+ingester:
+  replicas: 0
+querier:
+  replicas: 0
+query_frontend:
+  replicas: 0
+query_scheduler:
+  replicas: 0
+store_gateway:
+  replicas: 0
+ruler:
+  replicas: 0
+overrides_exporter:
+  replicas: 0
+
+minio:
+  enabled: false
+nginx:
+  enabled: false
+
+metaMonitoring:
+  serviceMonitor:
+    enabled: false

@@ -1,0 +1,33 @@
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    memory: 256Mi
+
+persistence:
+  enabled: true
+  size: 1Gi
+
+service:
+  type: NodePort
+  nodePort: 30300
+
+adminPassword: "admin123"
+
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Loki
+        type: loki
+        url: http://loki.observability.svc.cluster.local:3100
+        access: proxy
+      - name: Mimir
+        type: prometheus
+        url: http://mimir-nginx.observability.svc.cluster.local/prometheus
+        access: proxy
+      - name: Tempo
+        type: tempo
+        url: http://tempo.observability.svc.cluster.local:3100
+        access: proxy
