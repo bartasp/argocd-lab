@@ -3,6 +3,8 @@ minio:
 
 mimir:
   structuredConfig:
+    ingest_storage:
+      enabled: false
     usage_stats:
       enabled: false
     limits:
@@ -22,7 +24,10 @@ mimir:
       filesystem:
         dir: /data/ruler
 
-nginx:
+kafka:
+  enabled: false
+
+gateway:
   enabled: true
   resources:
     requests:
