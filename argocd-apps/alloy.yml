@@ -6,13 +6,13 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: https://grafana-community.github.io/helm-charts
+  - repoURL: https://grafana-community.github.io/helm-charts
       chart: alloy
       targetRevision: "*"
       helm:
         valueFiles:
-          - $values/observability/alloy/alloy-values.yaml
-    - repoURL: https://github.com/bartasp/argocd-lab.git
+          - $values/observability/alloy/alloy-values.yaml    
+  - repoURL: https://github.com/bartasp/argocd-lab.git
       targetRevision: main
       ref: values
   destination:
