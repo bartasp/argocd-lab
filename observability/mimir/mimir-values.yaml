@@ -49,4 +49,4 @@ metaMonitoring:
 
 nginx:
   config:
-    dnsResolver: rke2-coredns-rke2-coredns
+    dnsResolver: rke2-coredns-rke2-coredns.kube-system.svc.cluster.local
