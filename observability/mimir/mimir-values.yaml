@@ -5,6 +5,8 @@ mimir:
   structuredConfig:
     ingest_storage:
       enabled: false
+    ingester:
+      push_grpc_method_enabled: true
     usage_stats:
       enabled: false
     limits:
@@ -35,6 +37,8 @@ gateway:
       memory: 32Mi
     limits:
       memory: 64Mi
+
+nginx:
   config:
     dnsResolver: rke2-coredns-rke2-coredns.kube-system.svc.cluster.local
 
