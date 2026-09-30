@@ -1,10 +1,11 @@
 alloy:
   resources:
     requests:
-      cpu: 50m
-      memory: 64Mi
+      cpu: 25m
+      memory: 48Mi
     limits:
-      memory: 128Mi
+      memory: 96Mi
 
 controller:
-  type: daemonset
+  type: daemonseit
+  replicas: 1
