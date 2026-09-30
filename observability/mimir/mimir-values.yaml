@@ -14,15 +14,15 @@ mimir:
     blocks_storage:
       backend: filesystem
       filesystem:
-        dir: /data/blocks
+        dir: /data-storage/blocks
     alertmanager_storage:
       backend: filesystem
       filesystem:
-        dir: /data/alertmanager
+        dir: /data-storage/alertmanager
     ruler_storage:
       backend: filesystem
       filesystem:
-        dir: /data/ruler
+        dir: /data-storage/ruler
 
 kafka:
   enabled: false
