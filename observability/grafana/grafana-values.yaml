@@ -40,3 +40,8 @@ datasources:
         type: tempo
         url: http://tempo.observability.svc.cluster.local:3200
         access: proxy
+      - name: Prometheus
+        type: prometheus
+        url: http://prometheus-server.observability.svc.cluster.local
+        access: proxy
+        isDefault: false
