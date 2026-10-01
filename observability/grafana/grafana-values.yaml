@@ -36,10 +36,6 @@ datasources:
         type: loki
         url: http://loki.observability.svc.cluster.local:3100
         access: proxy
-      - name: Mimir
-        type: prometheus
-        url: http://mimir-gateway.observability.svc.cluster.local/prometheus
-        access: proxy
       - name: Tempo
         type: tempo
         url: http://tempo.observability.svc.cluster.local:3200
