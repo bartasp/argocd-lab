@@ -1,4 +1,6 @@
 server:
+  nodeSelector:
+    kubernetes.io/hostname: rke2-agent
   persistentVolume:
     enabled: true
     size: 2Gi
@@ -28,7 +30,7 @@ kube-state-metrics:
 serverFiles:
   prometheus.yml:
     scrape_configs:
-      - job_name: "kubernetes-pods"
+      - job_name: "demo-app-pods"
         kubernetes_sd_configs:
           - role: pod
         relabel_configs:
