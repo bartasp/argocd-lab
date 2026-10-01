@@ -4,7 +4,7 @@ metadata:
   name: demo-app-pdb
   namespace: demo-app
 spec:
-  minAvailable: 2
+  minAvailable: 1
   selector:
     matchLabels:
       app: demo-app
