@@ -36,7 +36,7 @@ spec:
       containers:
         - name: demo-app
           image: registry.gitlab.com/argocd-lab2/demo-app:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
           resources:
