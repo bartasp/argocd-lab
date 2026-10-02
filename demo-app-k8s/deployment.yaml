@@ -35,7 +35,7 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
         - name: demo-app
-          image: registry.gitlab.com/argocd-lab2/demo-app:latest
+          image: registry.gitlab.com/argocd-lab2/demo-app:b6959a5b
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
